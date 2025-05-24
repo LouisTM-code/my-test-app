@@ -1,0 +1,7 @@
+name = "my-worker"
+compatibility_date = "2025-05-24"
+# если вы деплоите Worker-скрипт:
+main = "src/index.js"
+# или, если вы деплоите статические файлы из папки build:
+# [assets]
+#   directory = "build"
