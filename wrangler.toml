@@ -1,29 +1,8 @@
-# Наименование проекта (должно быть уникальным в рамках аккаунта)
-name = "my-react-app"
+# Уникальное имя вашего Pages-проекта
+name = "my-react-pages-app"                                              # :contentReference[oaicite:0]{index=0}
 
-# Версия API Workers, с которой вы хотите быть совместимы
-compatibility_date = "2025-05-24"
+# Дата совместимости API Workers (формат YYYY-MM-DD)
+compatibility_date = "2025-05-24"                                        # :contentReference[oaicite:2]{index=2}
 
-# Ваш Account ID в Cloudflare (можно узнать в профиле на dash.cloudflare.com)
-account_id = "YOUR_ACCOUNT_ID"
-
-# Развёртывание в поддомене типа <name>.<account>.workers.dev
-workers_dev = true
-
-# Путь к Service-Worker–скрипту (запускает Workers Site)
-main = "workers-site/index.js"
-
-# Если вы хотите деплоить статические файлы вместе с Worker’ом
-[site]
-# Папка с собранным React (npm run build → build/)
-bucket = "./build"
-# Точка входа (имя директории с кодом bootstrap-воркера)
-entry-point = "workers-site"
-
-# Команда, выполняемая перед деплоем
-[build]
-command = "npm ci && npm run build"
-
-# Опции загрузки: используем Service-Worker формат загрузки ассетов
-[build.upload]
-format = "service-worker"
+# Директория с результатом сборки React (npm run build → ./build)
+pages_build_output_dir = "./build"                                       # :contentReference[oaicite:3]{index=3}
